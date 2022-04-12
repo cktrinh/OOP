@@ -1,0 +1,50 @@
+// public int powersof2 (int n)
+// // mechanics-wise, recursions invoke functions while the while loop only loops a local variable;
+// {
+//     //base case n is 0
+//     if (n == 0)
+//     // 2^0 = 1
+//     {
+//         return 1;
+//     }
+
+//     // recursive case: arbitrary n
+//     else
+//     {
+//         // 2^n = 2 * (2^(n-1))
+//         int smallerPowerof2 = powersof2(n-1);
+//         return 2*smallerPowerof2;
+//     }
+// }
+
+public class RecursionExample
+{
+    public RecursionExample()
+    {
+        System.out.println(multiply(2,3));
+    }
+}
+
+public int multiply(int a, int b)
+{
+    //base case: a is 0
+    if (a==0)
+    
+    // 0*b=0
+    {
+        return 0;
+    }
+    
+    //recursive case: a > 0
+    else
+    
+    //a*b=b+(a-1)b
+    {
+        return b + multiply(a-1,b);
+    }
+}
+
+public static void main(String[]args)
+{
+    new RecursionExample();
+}
